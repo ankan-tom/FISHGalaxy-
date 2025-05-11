@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colour Fish - Color Fish Selling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>FishGalaxy</h1>
+  <p>Beautiful & Exotic Color Fish for Sale</p>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+  <h2>Welcome to FishGalaxy</h2>
+  <p>Your one-stop shop for beautiful, healthy color fish in Howrah</p>
+</section>
+
+<section class="content">
+  <h2>About Us</h2>
+  <p>We specialize in selling a wide variety of colorful, vibrant fish for aquariums and home tanks. Located in Pakuria, Howrah, we take pride in providing healthy and attractive fish for your enjoyment.</p>
+
+  <h2>Our Fish</h2>
+  <ul>
+    <li>Goldfish</li>
+    <li>Guppy</li>
+    <li>Molly</li>
+    <li>Betta</li>
+    <li>And many more...</li>
+  </ul>
+</section>
+
+<section class="gallery">
+  <h2>Our Beautiful Fish Collection</h2>
+  <div class="gallery-grid">
+    <img src="green-fish.jpg" alt="Colorful Fish 1">
+    <img src="guppy.jpg" alt="Colorful Fish 2">
+    <img src="angel.jpg" alt="Colorful Fish 3">
+    <img src="tetra.jpg" alt="Colorful Fish 4">
+  </div>
+</section>
+<section class="order">
+  <h2>Order Your Favourite Fish</h2>
+  <p>See something you like? Message us on WhatsApp to order or ask about availability.</p>
+  <a href="https://wa.me/916291758913?text=Hi%2C%20I%20want%20to%20buy%20color%20fish%20from%20Colour%20Fish." target="_blank" class="order-button">Order on WhatsApp</a>
+</section>
+<section class="pricing fade-in" id="pricing">
+  <h2>Fish Pricing</h2>
+  <div class="pricing-table">
+    <div class="pricing-card">
+      <h3>Small Color Fish</h3>
+      <p class="price">₹50 / pair</p>
+      <ul>
+        <li>Bright colors</li>
+        <li>Easy to maintain</li>
+        <li>Perfect for small tanks</li>
+      </ul>
+    </div>
+    <div class="pricing-card popular">
+      <h3>Medium Color Fish</h3>
+      <p class="price">₹100 / pair</p>
+      <ul>
+        <li>Vibrant and active</li>
+        <li>Great for medium aquariums</li>
+        <li>Most popular choice</li>
+      </ul>
+    </div>
+    <div class="pricing-card">
+      <h3>Large Color Fish</h3>
+      <p class="price">₹200 / pair</p>
+      <ul>
+        <li>Impressive look</li>
+        <li>Good for big tanks</li>
+        <li>High-quality breeds</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p><strong>Phone:</strong> 6291758913</p>
+  <p><strong>Address:</strong> Pakuria, Howrah</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Colour Fish. All rights reserved.</p>
+</footer>
+<a href="https://wa.me/916291758913" class="whatsapp-button" target="_blank" title="Chat with us on WhatsApp">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+</a>
+<script>
+  const elements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+<section class="hero fade-in"> ... </section>
+<section class="gallery fade-in"> ... </section>
+<section class="order fade-in"> ... </section>
+<section class="contact fade-in"> ... </section>
+<div class="progress-bar"></div>
+<script>
+  window.onscroll = function() {
+    var scrollTop = document.documentElement.scrollTop;
+    var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrollPercent = (scrollTop / docHeight) * 100;
+    document.querySelector('.progress-bar').style.width = scrollPercent + '%';
+  };
+</script>
+<section class="testimonials fade-in">
+  <h2>Customer Reviews</h2>
+  <div class="testimonial-slider">
+    <div class="testimonial">
+      <p>"Great experience! The fish are beautiful and healthy!"</p>
+      <p>- John Doe</p>
+    </div>
+    <div class="testimonial">
+      <p>"Very satisfied with the service. Highly recommend!"</p>
+      <p>- Jane Smith</p>
+    </div>
+    <div class="testimonial">
+      <p>"Excellent variety of color fish. Will definitely buy again!"</p>
+      <p>- Alex Brown</p>
+    </div>
+  </div>
+</section>
+<section class="faq fade-in" id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-button">What types of fish do you sell?</button>
+      <div class="accordion-content">
+        <p>We sell various color fish, including small, medium, and large sizes.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button">How can I place an order?</button>
+      <div class="accordion-content">
+        <p>You can order by clicking the "Order on WhatsApp" button on our website.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-button">What is the price range for your fish?</button>
+      <div class="accordion-content">
+        <p>Our prices range from ₹50 for small fish to ₹200 for large fish pairs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<button class="toggle-button" onclick="toggleMode()">Toggle Mode</button>
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+<script>
+  function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+<section>
+  <div class="testimonial fade-in">
+    <h3>John Doe</h3>
+    <p>“I bought several fish from Colour Fish and I am thrilled with the quality and colors!”</p>
+  </div>
+</section>
+
+</body>
+
+
+</html>
